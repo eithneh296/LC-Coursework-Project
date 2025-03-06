@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <h1>Happiness Index Statistics</h1>
+    <nav>
+        <ul class="nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
+            <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+        </ul>
+    </nav>   
+    <h2>Hello!</h2>
+</body>
+</html>

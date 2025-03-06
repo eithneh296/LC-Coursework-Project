@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <h1>Happiness Index Statistics</h1>
+    <nav>
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="{{ url_for('statistics_page') }}">Statistic Page</a></li>
+            <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+        </ul>
+    </nav>   
+    <h2>Plot</h2>
+    <h2>Statistics</h2>
+    <ul>
+        {% for key, values in stats.items() %}
+        <li><strong>{{ key }}:</strong>
+            <ul>
+                {% for stat_name, stat_value in values.items() %}
+                    <li>{{ stat_name }}: {{ stat_value }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Mode</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for col, stats in stats.items() %}
+            <tr>
+                <td>{{ col }}</td>
+                <td>{{ stats['Mean'] }}</td>
+                <td>{{ stats['Median'] }}</td>
+                <td>{{ stats['Mode'] }}</td>
+                <td>{{ stats['Range'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+ 
+</body>
+</html>

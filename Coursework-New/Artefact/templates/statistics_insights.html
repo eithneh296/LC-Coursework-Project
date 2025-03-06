@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <h1>Happiness Index Statistics</h1>
+    <nav>
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="{{ url_for('statistics_page') }}">Statistics Page</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>   
+    <h2>Plot</h2>
+    <h2>Statistics</h2>
+    <ul>
+        {% for key, values in stats.items() %}
+        <li><strong>{{ key }}:</strong>
+            <ul>
+                {% for stat_name, stat_value in values.items() %}
+                    <li>{{ stat_name }}: {{ stat_value }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
