@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happiness Index Statistics</title>
+    <title>Statistics Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
+
     <h1>Happiness Index Statistics</h1>
+
+    <!-- Navigation Menu -->
     <nav>
         <ul class="nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="{{ url_for('statistics_page') }}">Statistic Page</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
         </ul>
-    </nav>   
-    <h2>Plot</h2>
+    </nav>
+
+    <!-- Statistics Section -->
     <h2>Statistics</h2>
     <ul>
         {% for key, values in stats.items() %}
@@ -26,9 +30,10 @@
                 {% endfor %}
             </ul>
         </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 
+    <!-- Table for Statistics -->
     <table border="1">
         <thead>
             <tr>
@@ -52,6 +57,45 @@
         </tbody>
     </table>
 
- 
+    <!-- Bar Chart Section -->
+    <h2>Happiness Score Bar Chart</h2>
+    <div>
+        {{ bar_chart|safe }}
+    </div>
+
+    <!-- Line Chart Section -->
+    <h2>Happiness Score Line Chart</h2>
+    <div>
+        {{ line_chart|safe }}
+    </div>
+
+    <!-- Pie Chart Section -->
+    <h2>Perceptions of Corruption Pie Chart</h2>
+    <div>
+        {{ pie_chart|safe }}
+    </div>
+
+    <!-- Sunburst Chart Section -->
+    <h2>Sunburst Chart - Perceptions of Corruption</h2>
+    <div>
+        {{ sunburst_chart|safe }}
+    </div>
+       <!-- Continent Filter Form -->
+       <h2>Select Continents to Filter Pie Chart</h2>
+       <form method="POST" action="{{ url_for('statistics_page') }}">
+           <div>
+               <label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label>
+               <label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label>
+               <label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label>
+               <label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label>
+               <label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label>
+               <label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label>
+               <label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label>
+           </div>
+           <button type="submit">Update Chart</button>
+       </form>
+    
 </body>
 </html>
+
+
