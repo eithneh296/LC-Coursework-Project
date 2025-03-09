@@ -1,10 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, ul {
   margin-top: 0;
   padding: 0;
+  background-color: #ffffff;
+}
+
+.top-container {
+  background-color: #a5dc81;  /* Choose your color */
+  padding: 0px 0;  /* Adjust vertical padding */
+  display: flex;
+  flex-direction: column;
+  width: 100%;  /* Ensures it doesn’t overflow */
+  box-sizing: border-box;  /* Includes padding in width */
+}
+
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change "Arial" to any preferred font */
+    font-size: 32px; /* Adjust size as needed */
+    font-weight: bold; /* Adjust weight if needed */
+    color: #ffffff; /* Change this to any color (e.g., white) */
 }
 
 .nav {
-  background-color: #3a1313;
+  background-color: #56ba49;
   display: flex;
   overflow: hidden;
   justify-content: center;
@@ -32,3 +65,17 @@ body, ul {
   background-color: #555;
 }
 
+.sunburst-container {
+  display: flex;
+  justify-content: center; /* Centers the charts */
+  align-items: center; /* Aligns them vertically */
+  gap: 30px; /* Space between charts */
+  flex-wrap: wrap; /* Ensures responsiveness on small screens */
+  width: 100%;
+}
+
+.chart {
+  flex: 1;
+  max-width: 45%; /* Ensures each chart takes up ~half the width */
+  min-width: 400px; /* Prevents charts from getting too small */
+}

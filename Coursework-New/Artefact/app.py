@@ -61,7 +61,7 @@ def statistics_page():
                 }
 
     # Create Bar Chart using Plotly
-    bar_fig = px.bar(df,  
+    bar_fig1 = px.bar(df,  
                      x='Country or region',
                      y='Score',
                      title='Happiness Score by Country',
@@ -69,44 +69,42 @@ def statistics_page():
                      color='Score',
                      color_continuous_scale='viridis')
 
-    # Adjust the layout for the bar chart
-    bar_fig.update_layout(
-        xaxis=dict(
-            tickangle=35,  
-            tickmode='array',
-            tickvals=df['Country or region'],
-            automargin=True  
-        ),
-        autosize=True,
-        margin=dict(l=50, r=50, t=40, b=300),  
-        height=600,  
-        width=4000,  
-        bargap=0.2
-    )
+    # Convert bar chart to HTML for embedding
+    bar_chart_html1 = bar_fig1.to_html(full_html=False)
+
+    # Create Bar Chart using Plotly
+    bar_fig2 = px.bar(df,  
+                     x='Country or region',
+                     y='GDP per capita',
+                     title='GDP per capita by Country',
+                     labels={'GDP per capita': 'GDP per capita', 'Country or region': 'Country'},
+                     color='Score',
+                     color_continuous_scale='viridis')
 
     # Convert bar chart to HTML for embedding
-    bar_chart_html = bar_fig.to_html(full_html=False)
-
+    bar_chart_html2 = bar_fig2.to_html(full_html=False)
+    
     # Create Line Plot
-    line_fig = px.line(df, x='Country or region', y='GDP per capita', title='GDP per capita by Country')
-
-    # Adjust the layout for the line chart
-    line_fig.update_layout(
-        xaxis=dict(
-            tickangle=35,  
-            tickmode='array',
-            tickvals=df['Country or region'],
-            automargin=True  
-        ),
-        autosize=True,
-        margin=dict(l=50, r=50, t=40, b=300),  
-        height=600,  
-        width=4000,  
-        bargap=0.2
-    )
+    line_fig1 = px.line(df, x='Country or region', y='Social support', title='Social support per Country')
 
     # Convert line chart to HTML for embedding
-    line_chart_html = line_fig.to_html(full_html=False)
+    line_chart_html1 = line_fig1.to_html(full_html=False)
+    
+    # Create Line Plot
+    line_fig2 = px.line(df, x='Country or region', y='Healthy life expectancy', title='Healthy life expectancy by Country')
+
+    # Convert line chart to HTML for embedding
+    line_chart_html2 = line_fig2.to_html(full_html=False)
+
+    # Creating scatter plot chart with Plotly
+    scatter_plot = px.scatter(df,
+                              x='Country or region',
+                              y='Freedom to make life choices',
+                              color='Freedom to make life choices',
+                              color_continuous_scale='viridis')
+   
+   # Convert scatter plot chart to HTML for embedding
+    scatter_plot = scatter_plot.to_html(full_html=False)
 
     continent_mapping = {
         'Africa': ['South Africa', 'Nigeria', 'Egypt', 'Morocco', 'Algeria', 'Tunisia', 'Ivory Coast', 'Ghana', 'Senegal', 'Somalia', 'Cameroon', 'Uganda', 'Benin', 'Niger', 'Sudan', 'Togo', 'Guinea', 'Lesotho', 'Angola', 'Madagascar', 'Zimbabwe', 'Botswana', 'Malawi', 'Namibia', 'Liberia', 'Mali', 'Mozambique', 'Kenya', 'Zambia', 'Mauritania', 'Ethiopia', 'Rwanda', 'Central African Republic', 'Burundi', 'Chad', 'Congo (Brazzaville)', 'Congo (Kinshasa)', 'Sierra Leone', 'Mauritius'],
@@ -139,29 +137,53 @@ def statistics_page():
     # Filter DataFrame based on selected continents
     filtered_df = df[df['Continent'].isin(selected_continents)]
 
-    # ✅ Sunburst Chart (Moved Inside Function)
-    sunburst_fig = px.sunburst(filtered_df, 
+    # Sunburst Chart 1 (Moved Inside Function)
+    sunburst_fig1 = px.sunburst(filtered_df, 
                                path=['Country or region'],  
                                values='Perceptions of corruption', 
                                title='Perceptions of Corruption by Country',  
                                color_discrete_sequence=px.colors.qualitative.Set2)  
 
     # Adjust layout for better visibility
-    sunburst_fig.update_layout(
-        height=600,  
-        width=900,
-        margin=dict(l=100, r=100, t=100, b=100)  
+    sunburst_fig1.update_layout(
+        height=500,  
+        width=750,
+        margin=dict(l=50, r=50, t=50, b=50)  
     )
 
     # Convert sunburst chart to HTML for embedding
-    sunburst_chart_html = sunburst_fig.to_html(full_html=False)
+    sunburst_chart_html1 = sunburst_fig1.to_html(full_html=False)
+
+# Filter DataFrame based on selected continents
+    filtered_df = df[df['Continent'].isin(selected_continents)]
+
+    # Sunburst Chart 1 (Moved Inside Function)
+    sunburst_fig2 = px.sunburst(filtered_df, 
+                               path=['Country or region'],  
+                               values='Generosity', 
+                               title='Generosity by Country',  
+                               color_discrete_sequence=px.colors.qualitative.Set2)  
+
+    # Adjust layout for better visibility
+    sunburst_fig2.update_layout(
+        height=500,  
+        width=750,
+        margin=dict(l=50, r=50, t=50, b=50)  
+    )
+
+    # Convert sunburst chart to HTML for embedding
+    sunburst_chart_html2 = sunburst_fig2.to_html(full_html=False)
 
     # Ensure return statement is inside the function
     return render_template('statistics_page.html', 
                            stats=stats_archive, 
-                           bar_chart=bar_chart_html, 
-                           line_chart=line_chart_html, 
-                           sunburst_chart=sunburst_chart_html)
+                           bar_chart1=bar_chart_html1,
+                           bar_chart2=bar_chart_html2, 
+                           line_chart1=line_chart_html1,
+                           line_chart2=line_chart_html2,
+                           scatter_plot=scatter_plot,
+                           sunburst_chart1=sunburst_chart_html1,
+                           sunburst_chart2=sunburst_chart_html2)
 
 @app.route('/user_poll')
 def userpoll():
