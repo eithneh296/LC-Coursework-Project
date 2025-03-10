@@ -4,16 +4,74 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happiness Index Statistics</title>
+    <title>User Poll</title>
 </head>
 <body>
-    <h1>Happiness Index Statistics</h1>
+    <h1>User Poll</h1>
     <nav>
         <ul class="nav">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
+            <li><a href="{{ url_for('userpoll') }}">Poll</a></li>
         </ul>
     </nav>   
-    <h2>Hello!</h2>
+
+    <!-- Poll Form for Country -->
+    <h2>What country are you from?</h2>
+    <form action="{{ url_for('userpoll') }}" method="POST" onsubmit="return validateForm()">
+        <label for="country">Type your answer:</label><br>
+        <input type="text" id="country" name="country" placeholder="Enter your country name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Poll Form for Perceived Happiness -->
+    <h2>Do you believe this country has a high happiness score?</h2>
+    <form action="{{ url_for('userpoll') }}" method="POST" onsubmit="return validateForm()">
+        <label for="happy">Select your answer:</label><br>
+        <!-- Yes radio button -->
+        <input type="radio" id="yes" name="happy" value="Yes">
+        <label for="yes">Yes</label><br>
+        <!-- No radio button -->
+        <input type="radio" id="no" name="happy" value="No">
+        <label for="no">No</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <!-- Poll Form for Rating -->
+    <h2>Rate the happiness score in your country from 1-10</h2>
+    <form action="{{ url_for('userpoll') }}" method="POST" onsubmit="return validateForm()">
+        <label for="score">Type your answer:</label><br>
+        <input type="text" id="score" name="score" placeholder="Enter your rating"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if user_data %}
+        <h2>User Poll Results</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Perceived Happiness (True/False)</th>
+                    <th>User Rating (1-10)</th>
+                    <th>Actual Country Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in comparison_data %}
+                    <tr>
+                        <td>{{ data.Country }}</td>
+                        <td>{{ data['Perceived Happiness'] }}</td>
+                        <td>{{ data['User Rating'] }}</td>
+                        <td>{{ data['Actual Score'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Thank you for your response!</h2>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/poll.js') }}"></script>
 </body>
 </html>
+
