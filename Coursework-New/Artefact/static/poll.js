@@ -1,20 +1,52 @@
-function validateForm() {
-    const continent = document.getElementById("continent").value;
-    if (continent === "") {
-        alert("Please type a continent name!");
-        return false;
-    }
-    document.getElementById("confirmation-message").style.display = "block";
-    return true;
-}
+let entryID = 1; // Auto-incrementing ID
 
-setTimeout(function() {
-    document.getElementById("confirmation-message").style.display = "none";
-}, 5000);
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("poll-form");
 
-function showPollResult() {
-    const continent = document.getElementById("continent").value;
-    const resultDiv = document.getElementById("poll-result");
-    resultDiv.innerHTML = `<h3>Your selected continent is: ${continent}</h3>`;
-    resultDiv.style.display = 'block';  // Show the result div
-}
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Get user inputs
+        const country = document.getElementById("country").value.trim();
+        const happinessResponse = document.querySelector('input[name="happy"]:checked');
+        const score = document.getElementById("score").value.trim();
+
+        // Validate inputs
+        if (!country || !happinessResponse || !score) {
+            alert("Please answer all questions before submitting.");
+            return;
+        }
+
+        // Ensure score is a number between 1-10
+        const scoreValue = parseInt(score, 10);
+        if (isNaN(scoreValue) || scoreValue < 1 || scoreValue > 10) {
+            alert("Please enter a valid happiness score between 1-10.");
+            return;
+        }
+
+        // Send data to Flask backend
+        let response = await fetch("/userpoll", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({
+                country: country,
+                happy: happinessResponse.value,
+                score: score
+            })
+        });
+
+        let data = await response.text(); // Receive updated HTML
+
+        // Extract just the table content from the response
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const newTable = doc.querySelector('#results-table');  // Extract table from response
+
+        // Replace only the table with the updated results
+        const resultsContainer = document.getElementById('results-container');
+        resultsContainer.innerHTML = newTable.outerHTML;  // Replace the table content
+    });
+});
+
+
+

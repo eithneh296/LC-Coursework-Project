@@ -79,3 +79,98 @@ body, ul {
   max-width: 45%; /* Ensures each chart takes up ~half the width */
   min-width: 400px; /* Prevents charts from getting too small */
 }
+
+/* Poll form styles */
+#poll-form {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#poll-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#poll-form input[type="text"],
+#poll-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#poll-form input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Submit button style */
+#poll-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#poll-form button:hover {
+  background-color: #45a049;
+}
+
+/* Table Styles */
+#results-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#results-table th, #results-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+#results-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+}
+
+#results-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#results-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Container for results */
+#results-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Make the table responsive */
+@media (max-width: 600px) {
+  #results-table, #poll-form {
+      width: 100%;
+      padding: 10px;
+  }
+
+  #poll-form label,
+  #poll-form input {
+      font-size: 14px;
+  }
+}

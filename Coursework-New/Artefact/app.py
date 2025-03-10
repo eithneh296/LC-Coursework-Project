@@ -185,35 +185,44 @@ def statistics_page():
                            sunburst_chart1=sunburst_chart_html1,
                            sunburst_chart2=sunburst_chart_html2)
 
-# Simulated dataset (replace this with actual data)
-country_scores = {
-    "United States": 7.5,
-    "Finland": 9.1,
-    "Brazil": 6.3,
-    "India": 5.9,
-}
-
 @app.route('/userpoll', methods=['GET', 'POST'])
 def userpoll():
     user_data = None
+    country_scores = {}
+
+    if df is not None:
+        country_scores = df.set_index('Country or region')['Score'].to_dict()
+
     if request.method == 'POST':
         # Capture user input
         happiness_response = request.form.get('happy')  # Yes or No
         country = request.form.get('country')  # User's country
         score = request.form.get('score')  # User's score for happiness (1-10)
+
+        # Get actual happiness score from the dataset
+        actual_score = country_scores.get(country, "N/A")  # Default to "N/A" if not found
         
-        # Store the data in a dictionary (or store in a database if necessary)
+        # Store the user submission data
         user_data = {
             'country': country,
             'score': score,
             'happiness_response': happiness_response
         }
-        
-        # Return the page with the user's data and the country data from your dataset
-        return render_template('user_poll.html', user_data=user_data, country_scores=country_scores)
+
+        # Return only the results part of the page
+        return render_template('user_poll.html', user_data=user_data, actual_score=actual_score, country_scores=country_scores, update_results=True)
     
-    # For GET request, just render the form with no user data
-    return render_template('user_poll.html', user_data=user_data, country_scores=country_scores)
+    # Initial GET request (show blank form)
+    return render_template('user_poll.html', user_data=user_data, country_scores=country_scores, update_results=False)
+
+@app.route('/recommendations')
+def recommendations():
+    print("Rendering Recommendations Page...")
+    
+    if df is None:
+        return "Error: Data file is missing!", 500
+
+    return render_template('recommendations.html')
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

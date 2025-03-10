@@ -4,21 +4,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happiness Index Statistics</title>
+    <title>Happiness Index Recommendations</title>
 </head>
 <body>
-    <div class="top-container">
-        <div class="header">
-            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>Happiness Index Statistics</h1>
-    </div>
+    <h1>Happiness Index Recommendations</h1>
     <nav>
         <ul class="nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
             <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
-            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
+            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li> 
         </ul>
-    </nav>   
-    <h2>Hello!</h2>
+    </nav>  
+
+    <h2>Recommendations for Improving Happiness</h2>
+    <p>Here are some ways to improve happiness based on global research:</p>
+
 </body>
 </html>
+
