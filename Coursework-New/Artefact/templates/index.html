@@ -11,6 +11,7 @@
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
             <h1>Happiness Index Statistics</h1>
+        </div>
     </div>
     <nav>
         <ul class="nav">
@@ -18,7 +19,19 @@
             <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
             <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
         </ul>
-    </nav>   
-    <h2>Hello!</h2>
+    </nav>  
+    <br> 
+    <div class="content-container">
+        <p>
+            Welcome to the Happiness Index dashboard. Data is collected from numerous countries, in the year 2018, 
+            displaying how happiness is measured across the world. The Happiness Index is based on key factors such as 
+            GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and 
+            perceptions of corruption. On this website, you can explore the displayed data with interactive visualizations, 
+            providing detailed analyses to better one's knowledge of the global happiness index scores. 
+            In addition, you can submit your own happiness rating for your own country and view recommendations on 
+            how one can improve these causes.
+        </p>
+        <img src="{{ url_for('static', filename='img/happy.jpg') }}" class="happy-img">
+    </div>
 </body>
 </html>

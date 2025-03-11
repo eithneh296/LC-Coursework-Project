@@ -8,8 +8,12 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-
-    <h1>Happiness Index Statistics</h1>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>User Poll</h1>
+        </div>
+    </div>
 
     <!-- Navigation Menu -->
     <nav>
@@ -20,44 +24,7 @@
         </ul>
     </nav>
 
-    <!-- Statistics Section -->
-    <h2>Statistics</h2>
-    <ul>
-        {% for key, values in stats.items() %}
-        <li><strong>{{ key }}:</strong>
-            <ul>
-                {% for stat_name, stat_value in values.items() %}
-                    <li>{{ stat_name }}: {{ stat_value }}</li>
-                {% endfor %}
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
-
-    <!-- Table for Statistics -->
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Column Name</th>
-                <th>Mean</th>
-                <th>Median</th>
-                <th>Mode</th>
-                <th>Range</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for col, stats in stats.items() %}
-            <tr>
-                <td>{{ col }}</td>
-                <td>{{ stats['Mean'] }}</td>
-                <td>{{ stats['Median'] }}</td>
-                <td>{{ stats['Mode'] }}</td>
-                <td>{{ stats['Range'] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
+    <br> 
  <!-- Bar Chart Section -->
      <h2>Happiness Score Bar Chart</h2>
      <div>
@@ -113,6 +80,29 @@
              </div>
              <button type="submit">Update Chart</button>
          </form>
+
+         <h2>Continent-Based Statistics</h2>
+         {% for continent, data in continent_stats.items() %}
+             <h3>{{ continent }}</h3>
+             <table border="1">
+                 <tr>
+                     <th>Metric</th>
+                     <th>Mean</th>
+                     <th>Median</th>
+                     <th>Mode</th>
+                     <th>Range</th>
+                 </tr>
+                 {% for column, stats in data.items() %}
+                 <tr>
+                     <td>{{ column }}</td>
+                     <td>{{ stats['Mean'] }}</td>
+                     <td>{{ stats['Median'] }}</td>
+                     <td>{{ stats['Mode'] }}</td>
+                     <td>{{ stats['Range'] }}</td>
+                 </tr>
+                 {% endfor %}
+             </table>
+         {% endfor %}
 </body>
 </html>
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Summary</h1>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <br> 
+
+    {% if message %}
+        <p style="color: green; font-weight: bold;">{{ message }}</p>
+    {% endif %}
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Believes Happiness is High</th>
+                <th>User Happiness Score</th>
+                <th>Actual Happiness Score</th>  <!-- New column -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in user_submissions %}
+            <tr>
+                <td>{{ entry['Country'] }}</td>
+                <td>{{ entry['Happiness Response'] }}</td>
+                <td>{{ entry['Score'] }}</td>
+                <td>{{ entry['Actual Score'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>    
+
+<!-- Pie Chart -->
+{% if pie_chart %}
+    <h2>User Happiness Scores Pie Chart</h2>
+    <div>{{ pie_chart|safe }}</div>
+{% else %}
+    <p>No data available for the pie chart.</p>
+{% endif %}
+
+    <br>
+    <a href="{{ url_for('userpoll') }}">User Poll</a>
+</body>
+</html>

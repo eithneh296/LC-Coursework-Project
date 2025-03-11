@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Happiness Poll</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>User Poll</h1>
+        </div>
+    </div>
+    <nav>
+        <ul class="nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
+            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <form id="poll-form" method="POST" action="{{ url_for('userpoll') }}">
+        <label for="Country">Select your country:</label>
+        <select name="Country" required>
+            <option value="" disabled selected>Choose a country</option>
+            {% for country in all_countries %}
+                <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+        </select>
+    
+        <br><br>
+    
+        <label>Are you happy in your country?</label>
+        <input type="radio" name="happy" value="Yes" required> Yes
+        <input type="radio" name="happy" value="No" required> No 
+    
+        <br><br>
+    
+        <label for="Score">On a scale from 1-10, how happy do you feel in your country?</label>
+        <input type="number" id="Score" name="Score" min="1" max="10" required> 
+    
+        <br><br>
+    
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
