@@ -10,45 +10,44 @@
     <div class="top-container">
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>Summary</h1>
+            <h1>Happiness Index Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
+                <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+                <li><a href="{{ url_for('summary_page') }}">Summary</a></li>
+            </ul>
         </div>
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul class="nav">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
-            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
-        </ul>
-    </nav>
-
+    </div>  
     <br> 
 
     {% if message %}
-        <p style="color: green; font-weight: bold;">{{ message }}</p>
+    <p style="color: green; font-family: 'Arial', sans-serif; font-weight: bold;">{{ message }}</p>
     {% endif %}
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Country</th>
-                <th>Believes Happiness is High</th>
-                <th>User Happiness Score</th>
-                <th>Actual Happiness Score</th>  <!-- New column -->
-            </tr>
-        </thead>
-        <tbody>
-            {% for entry in user_submissions %}
-            <tr>
-                <td>{{ entry['Country'] }}</td>
-                <td>{{ entry['Happiness Response'] }}</td>
-                <td>{{ entry['Score'] }}</td>
-                <td>{{ entry['Actual Score'] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>    
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Believes Happiness is High</th>
+                    <th>User Happiness Score</th>
+                    <th>Actual Happiness Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in user_submissions %}
+                <tr>
+                    <td>{{ entry['Country'] }}</td>
+                    <td>{{ entry['Happiness Response'] }}</td>
+                    <td>{{ entry['Score'] }}</td>
+                    <td>{{ entry['Actual Score'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>   
 
 <!-- Pie Chart -->
 {% if pie_chart %}
@@ -58,7 +57,5 @@
     <p>No data available for the pie chart.</p>
 {% endif %}
 
-    <br>
-    <a href="{{ url_for('userpoll') }}">User Poll</a>
 </body>
 </html>

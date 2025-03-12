@@ -1,56 +1,63 @@
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, ul {
-  margin-top: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-
+/* Green top container */
 .top-container {
   background-color: #a5dc81;
-  padding: 0px 0;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
   width: 100%;
-  box-sizing: border-box;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
 }
 
-.header img {
-  float: left;
-  width: 100px;
-  height: 100px;
-}
-
-.header h1 {
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
   position: relative;
-  top: 18px;
-  left: 10px;
+  width: 100%;
+}
+
+/* Logo */
+.header img {
+  width: 85px;
+  height: 85px;
+}
+
+/* Title */
+.header h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 32px;
   font-weight: bold;
   color: #ffffff;
+  margin-left: 10px;
+  flex-grow: 1; /* Pushes the navigation to the right */
 }
 
+/* Navigation styles */
 .nav {
-  background-color: #56ba49;
   display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
+  list-style: none;
   padding: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  margin: 0;
+  position: absolute;
+  right: 20px; /* Fixes the nav to the right */
+  top: 50%;
+  transform: translateY(-50%); /* Centers vertically */
+  font-family: 'Arial', sans-serif;
 }
 
+/* Navigation items */
 .nav li {
-  margin: 0 15px;
+  margin-left: 20px;
 }
 
+/* Navigation links */
 .nav a {
   text-decoration: none;
   color: white;
@@ -61,7 +68,44 @@ body, ul {
 }
 
 .nav a:hover {
-  background-color: #555;
+  background-color: #b6e397;
+  border-radius: 5px;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInUp 1s ease-out; /* Keeps animation but ensures visibility */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Paragraph text */
+.content-container p {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Image in content */
+.happy-img {
+  width: 375px;
+  height: auto;
+  margin-left: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .sunburst-container {
@@ -79,7 +123,7 @@ body, ul {
   min-width: 400px;
 }
 
-/* Poll form styles */
+/* Form Styling */
 #poll-form {
   background-color: #fff;
   padding: 20px;
@@ -87,13 +131,14 @@ body, ul {
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family:'Arial', Arial, sans-serif
 }
 
 #poll-form label {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
-  color: #333;
+  color: #000000;
 }
 
 #poll-form input[type="text"],
@@ -110,10 +155,9 @@ body, ul {
   transition: border-color 0.3s ease;
 }
 
-/* Match select styling with input fields */
 #poll-form select {
   background-color: #fff;
-  appearance: none; /* Removes default browser styling */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -123,24 +167,6 @@ body, ul {
   outline: none;
 }
 
-/* Optional: Customize dropdown arrow */
-#poll-form select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  background-color: #fff;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
-}
-
-#poll-form select option {
-  color: black;
-}
-
-/* Submit button style */
 #poll-form button {
   background-color: #4CAF50;
   color: white;
@@ -153,6 +179,29 @@ body, ul {
 
 #poll-form button:hover {
   background-color: #45a049;
+}
+
+/* Align radio buttons and add spacing */
+.radio-group {
+  display: flex;
+  gap: 20px; /* Adjusts spacing between "Yes" and "No" */
+  align-items: center;
+  margin-top: 10px; /* Adds space above the buttons */
+}
+
+/* Style labels to make clickable */
+.radio-group label {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between radio button and text */
+  cursor: pointer;
+}
+
+/* Style radio buttons */
+.radio-group input[type="radio"] {
+  width: 14px;
+  height: 14px;
 }
 
 /* Table Styles */
@@ -204,38 +253,82 @@ body, ul {
   }
 }
 
-.content-container {
-  display: flex;
-  align-items: center;
-  max-width: 900px;
-  margin: auto;
-}
-
-.content-container p {
-  flex: 1;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.happy-img {
-  width: 400px;
-  height: auto;
-  margin-left: 20px;
-}
-
-.content-container {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(50px);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-container {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .nav li {
+    margin-left: 10px;
+  }
+}
+
+/* Center the table container */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  width: 80%;  /* Adjust width for responsiveness */
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  max-width: 900px; /* Keeps the table from being too wide */
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; /* Ensures border-radius applies */
+}
+
+/* Table headers */
+th {
+  background-color: #84c05d;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Table cells */
+td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-container {
+      width: 95%;
+  }
+
+  table {
+      font-size: 16px;
+  }
+
+  th, td {
+      padding: 10px;
   }
 }

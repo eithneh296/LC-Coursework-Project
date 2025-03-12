@@ -11,20 +11,19 @@
     <div class="top-container">
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>User Poll</h1>
+            <h1>Happiness Index Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('statistics_page') }}">Statistics</a></li>
+                <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+                <li><a href="{{ url_for('summary_page') }}">Summary</a></li>
+            </ul>
         </div>
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul class="nav">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
-            <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
-        </ul>
-    </nav>
-
+    </div>  
     <br> 
+    
+    <h1>Statistics</h1>
+    <br>
  <!-- Bar Chart Section -->
      <h2>Happiness Score Bar Chart</h2>
      <div>

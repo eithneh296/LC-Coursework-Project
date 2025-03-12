@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Ensure score is between 1-10
-        const scoreValue = parseInt(score, 10);
-        if (isNaN(scoreValue) || scoreValue < 1 || scoreValue > 10) {
-            alert("Please enter a valid happiness score between 1-10.");
+        // Ensure score is between 1-7
+        const scoreValue = parseInt(score, 7);
+        if (isNaN(scoreValue) || scoreValue < 1 || scoreValue > 7) {
+            alert("Please enter a valid happiness score between 1-7.");
             event.preventDefault();
             return;
         }
