@@ -108,6 +108,20 @@
   }
 }
 
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change to any font you like */
+  font-size: 36px; /* Adjust size as needed */
+  font-weight: bold; /* Optional: Make it bold */
+  color: #4CAF50; /* Change color if needed */
+}
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change to any font you like */
+  font-size: 20px; /* Adjust size as needed */
+  font-weight: bold; /* Optional: Make it bold */
+  color: #060606; /* Change color if needed */
+}
+
 .sunburst-container {
   display: flex;
   justify-content: center;

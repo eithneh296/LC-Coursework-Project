@@ -64,10 +64,9 @@
         {{ sunburst_chart2|safe }}
     </div>
 </div>
-
-         <!-- Continent Filter Form -->
+        <!-- Continent Filter Form -->
          <h2>Select Continents to Filter Pie Chart</h2>
-         <form method="POST" action="{{ url_for('statistics_page') }}">
+         <form method="POST" action="{{ url_for('statistics_page') }}" class="continent-form"></form>
              <div>
                  <label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label>
                  <label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label>
