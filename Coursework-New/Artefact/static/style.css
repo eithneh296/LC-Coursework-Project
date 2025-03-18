@@ -122,6 +122,13 @@ h2 {
   color: #060606; /* Change color if needed */
 }
 
+h3 {
+  font-family: Arial, Helvetica, sans-serif; /* Change to any font you like */
+  font-size: 17px; /* Adjust size as needed */
+  color: #5e5e5e; /* Change color if needed */
+  text-align: center
+}
+
 .sunburst-container {
   display: flex;
   justify-content: center;
@@ -135,6 +142,49 @@ h2 {
   flex: 1;
   max-width: 45%;
   min-width: 400px;
+}
+
+.continent-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Adds space between elements */
+  padding: 15px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.continent-form div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+div label {
+  font-family: 'Arial';
+  font-size: 16px;
+  color: black;
+}
+
+.continent-form input[type="checkbox"] {
+  transform: scale(1.2); /* Makes checkboxes slightly larger */
+}
+
+.continent-form button {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.continent-form button:hover {
+  background-color: #45a049;
 }
 
 /* Form Styling */
@@ -308,6 +358,7 @@ table {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden; /* Ensures border-radius applies */
+  font-family: Arial, Helvetica, sans-serif
 }
 
 /* Table headers */
@@ -330,7 +381,6 @@ td {
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {

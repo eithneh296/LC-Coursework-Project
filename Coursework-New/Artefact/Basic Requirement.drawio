@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="t13KxLogKxGb8PlrujZB">
+    <mxGraphModel dx="1444" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-1" target="U8-T0AxVeGaMP_3ht1qr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-1" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Start BR1&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-2" target="U8-T0AxVeGaMP_3ht1qr-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-2" value="2018-Happiness-Index-Raw.csv" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="20" y="295" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-3" target="U8-T0AxVeGaMP_3ht1qr-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-3" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Select dataset as&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;a CSV file from a&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;reliable source&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="50" y="170" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-5" target="U8-T0AxVeGaMP_3ht1qr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-5" value="Clean the dataset using Python (pandas)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-8" target="U8-T0AxVeGaMP_3ht1qr-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-8" value="2018-Happiness-Index-Cleaned.csv" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="20" y="534.5" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-9" target="U8-T0AxVeGaMP_3ht1qr-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-9" value="End BR1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="70" y="630" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-10" target="U8-T0AxVeGaMP_3ht1qr-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-10" value="Start BR2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-11" target="U8-T0AxVeGaMP_3ht1qr-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-11" value="2018-Happiness-Index-Cleaned.csv" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="330" y="140" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-12" target="U8-T0AxVeGaMP_3ht1qr-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-12" value="Create bar charts with the data from 2018-Happiness-Index-Cleaned.csv&amp;nbsp;using Plotly" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="215" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-13" target="U8-T0AxVeGaMP_3ht1qr-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-13" value="Create line charts with the data from 2018-Happiness-Index-Cleaned.csv&amp;nbsp;using Plotly" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-14" target="U8-T0AxVeGaMP_3ht1qr-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-14" value="Create scatter plot with the data from 2018-Happiness-Index-Cleaned.csv&amp;nbsp;using Plotly" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="420" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-15" target="U8-T0AxVeGaMP_3ht1qr-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-15" value="Create sunburst charts with the data from 2018-Happiness-Index-Cleaned.csv&amp;nbsp;using Plotly" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="520" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-16" target="U8-T0AxVeGaMP_3ht1qr-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-16" value="End BR2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="380" y="630" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-17" target="U8-T0AxVeGaMP_3ht1qr-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-17" value="Start BR3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="690" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-20" target="U8-T0AxVeGaMP_3ht1qr-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-20" value="Create website application using Flasks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="670" y="170" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-22" target="U8-T0AxVeGaMP_3ht1qr-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-22" value="Create HTML templates (index, statistics, user poll and summary page)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="670" y="280" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-23" target="U8-T0AxVeGaMP_3ht1qr-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-23" value="Convert data visualisations to HTML" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="670" y="400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="U8-T0AxVeGaMP_3ht1qr-24" target="U8-T0AxVeGaMP_3ht1qr-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-24" value="Display data visualisations on &#39;Statistics Page&#39;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="610" y="525" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U8-T0AxVeGaMP_3ht1qr-27" value="End BR3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="690" y="630" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

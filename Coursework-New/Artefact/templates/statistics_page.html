@@ -25,36 +25,33 @@
     <h1>Statistics</h1>
     <br>
  <!-- Bar Chart Section -->
-     <h2>Happiness Score Bar Chart</h2>
+     <h2>Bar Charts</h2>
      <div>
          {{ bar_chart1|safe }}
      </div>
 
-<!-- Bar Chart Section -->
-    <h2>Happiness Score Bar Chart</h2>
     <div>
         {{ bar_chart2|safe }}
     </div>
 
 <!-- Line Chart Section -->
-    <h2>Happiness Score Line Chart</h2>
+    <h2>Line Charts</h2>
     <div>
         {{ line_chart1|safe }}
     </div>
-<!-- Line Chart Section -->
-    <h2>Happiness Score Line Chart</h2>
+
     <div>
         {{ line_chart2|safe }}
     </div>
 
 <!-- Scatter Plot Section -->
-<h2>Happiness Score Bar Chart</h2>
+<h2>Scatter Plot</h2>
 <div>
     {{ scatter_plot|safe }}
 </div>
 
-   <!-- Sunburst Chart Section -->
-<h2>Sunburst Chart - Perceptions of Corruption</h2>
+<!-- Sunburst Chart Section -->
+<h2>Sunburst Charts</h2>
 
 <div class="sunburst-container">
     <div class="chart">
@@ -64,24 +61,26 @@
         {{ sunburst_chart2|safe }}
     </div>
 </div>
-        <!-- Continent Filter Form -->
-         <h2>Select Continents to Filter Pie Chart</h2>
-         <form method="POST" action="{{ url_for('statistics_page') }}" class="continent-form"></form>
-             <div>
-                 <label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label>
-                 <label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label>
-                 <label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label>
-                 <label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label>
-                 <label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label>
-                 <label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label>
-                 <label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label>
-             </div>
-             <button type="submit">Update Chart</button>
-         </form>
 
+<!-- Continent Filter Form -->
+         <h2>Select Continents to Filter Sunburst Charts</h2>
+         <form method="POST" action="{{ url_for('statistics_page') }}" class="continent-form">
+            <div>
+                <div><label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label></div>
+                <div><label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label></div>
+                <div><label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label></div>
+                <div><label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label></div>
+                <div><label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label></div>
+                <div><label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label></div>
+                <div><label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label></div>
+            </div>
+            <button type="submit">Update Chart</button>
+        </form>
+         <div style="margin-bottom: 30px;"></div> 
          <h2>Continent-Based Statistics</h2>
          {% for continent, data in continent_stats.items() %}
              <h3>{{ continent }}</h3>
+             <div class="table-container">
              <table border="1">
                  <tr>
                      <th>Metric</th>
@@ -100,6 +99,7 @@
                  </tr>
                  {% endfor %}
              </table>
+            </div>
          {% endfor %}
 </body>
 </html>
