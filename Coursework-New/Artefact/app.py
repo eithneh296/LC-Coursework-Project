@@ -33,8 +33,8 @@ def index():
     return render_template('index.html')
 
 # creating statistics page
-@app.route('/statistics_page', methods=['GET', 'POST'])
-def statistics_page():
+@app.route('/statistics', methods=['GET', 'POST'])
+def statistics():
     if df is None:
         return "Error: Data file is missing!", 500
 
@@ -71,6 +71,9 @@ def statistics_page():
     # creating checkboxes for selected continents
     selected_continents = request.form.getlist('continents') if request.method == 'POST' else list(df['Continent'].unique())
     filtered_df = df[df['Continent'].isin(selected_continents)]
+    
+    if not selected_continents:
+        selected_continents = list(df['Continent'].unique())
 
     # creating sunburst charts
     sunburst_chart_html1 = px.sunburst(filtered_df, path=['Country or region'], values='Perceptions of corruption', title='Perceptions of Corruption by Country').to_html(full_html=False)
@@ -93,7 +96,7 @@ def statistics_page():
                 if column in df.columns
             }
 
-    return render_template('statistics_page.html',
+    return render_template('statistics.html',
                            bar_chart1=bar_chart_html1, bar_chart2=bar_chart_html2,
                            line_chart1=line_chart_html1, line_chart2=line_chart_html2,
                            scatter_plot=scatter_plot_html, sunburst_chart1=sunburst_chart_html1,
@@ -119,11 +122,24 @@ def userpoll():
 
 # creating summary page
 @app.route('/summary')
-def summary_page():
+def summary():
     if not os.path.isfile(csv_file):
         return render_template('summary.html', user_submissions=[], message=request.args.get('message', ''), pie_chart=None)
+    
     user_df = pd.read_csv(csv_file)
     user_df['Score'] = pd.to_numeric(user_df['Score'], errors='coerce')
+    
+    # matching actual happiness scores
+    if df is not None:
+        df['Country or region'] = df['Country or region'].str.lower()
+
+        # matching user poll inputs with actual happiness scores
+        user_df['Actual Score'] = user_df['Country'].apply(
+            lambda c: df.loc[df['Country or region'] == c.lower(), 'Score'].values[0]
+            if (df['Country or region'] == c.lower()).any() else "N/A"
+        )
+    
+    # creating pie chart
     pie_chart_html = None
     if not user_df.empty and user_df['Score'].notnull().any():
         pie_chart_html = px.pie(user_df, names='Country', values='Score', title="User Happiness Scores by Country").to_html(full_html=False)
@@ -132,12 +148,3 @@ def summary_page():
 # run flask application with given link
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
-
-
-
-     
-
-
-
-
-

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
+                <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>  
+    <br> 
+    
+    <h1>Statistics</h1>
+    <br>
+ <!-- Bar Chart Section -->
+     <h2>Bar Charts</h2>
+     <div>
+         {{ bar_chart1|safe }}
+     </div>
+
+    <div>
+        {{ bar_chart2|safe }}
+    </div>
+
+<!-- Line Chart Section -->
+    <h2>Line Charts</h2>
+    <div>
+        {{ line_chart1|safe }}
+    </div>
+
+    <div>
+        {{ line_chart2|safe }}
+    </div>
+
+<!-- Scatter Plot Section -->
+<h2>Scatter Plot</h2>
+<div>
+    {{ scatter_plot|safe }}
+</div>
+
+<!-- Sunburst Chart Section -->
+<h2>Sunburst Charts</h2>
+
+<div class="sunburst-container">
+    <div class="chart">
+        {{ sunburst_chart1|safe }}
+    </div>
+    <div class="chart">
+        {{ sunburst_chart2|safe }}
+    </div>
+</div>
+
+<!-- Continent Filter Form -->
+         <h2>Select Continents to Filter Sunburst Charts</h2>
+         <form method="POST" action="{{ url_for('statistics') }}" class="continent-form">
+            <div>
+                <div><label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label></div>
+                <div><label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label></div>
+                <div><label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label></div>
+                <div><label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label></div>
+                <div><label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label></div>
+                <div><label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label></div>
+                <div><label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label></div>
+            </div>
+            <button type="submit">Update Chart</button>
+        </form>
+         <div style="margin-bottom: 30px;"></div> 
+         <h2>Continent-Based Statistics</h2>
+         {% for continent, data in continent_stats.items() %}
+             <h3>{{ continent }}</h3>
+             <div class="table-container">
+             <table border="1">
+                 <tr>
+                     <th>Metric</th>
+                     <th>Mean</th>
+                     <th>Median</th>
+                     <th>Mode</th>
+                     <th>Range</th>
+                 </tr>
+                 {% for column, stats in data.items() %}
+                 <tr>
+                     <td>{{ column }}</td>
+                     <td>{{ stats['Mean'] }}</td>
+                     <td>{{ stats['Median'] }}</td>
+                     <td>{{ stats['Mode'] }}</td>
+                     <td>{{ stats['Range'] }}</td>
+                 </tr>
+                 {% endfor %}
+             </table>
+            </div>
+         {% endfor %}
+</body>
+</html>
+
+
