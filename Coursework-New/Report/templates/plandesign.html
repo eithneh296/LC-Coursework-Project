@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index - Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('meetingbrief') }}">Meeting the Brief</a></li>
+                <li><a href="{{ url_for('investigation') }}">Investigation</a></li>
+                <li><a href="{{ url_for('create') }}">Create</a></li>
+                <li><a href="{{ url_for('evaluation') }}">Evaluation</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br> 
+    <h1>Plan and Design</h1>
+    <br>
+    <h2>Description of Design</h2>
+    <br>
+    <ol>
+        <li>My chosen dataset, “Happiness Index Score”, in the year 2018, displays how happiness is measured across the world. The project is based on key factors such as GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and perceptions of corruption.</li>
+        <li>The dataset will be stored on a CSV file (that can be accessed through Microsoft Excel) and will be extracted, cleaned, and stored using pandas on Thonny.</li>
+        <li>A new Python program for Flask will be created for developing my functioning website.</li>
+        <li>On the Flask program, I will use Plotly to create and display interactive graphs on my website.</li>
+        <li>Upon opening the website, the user will be met with the “Home” page that explains the chosen dataset and the interactive information system.</li>
+        <li>The website will contain an interactive navigation bar of every page that consists of:
+            <ul>
+                <li>“Statistics”</li>
+                <li>“User Poll”</li>
+                <li>“Summary”</li>
+                <li>“Home” (in most cases)</li>
+            </ul>
+        </li>
+        <li>On the “Statistics” page, all of the graphs will be displayed as well as tables of the calculated mean, mode, median, and range of the data from every continent.</li>
+        <li>On the “User Poll” page, users will be met with three questions that they must answer before being redirected to the “Summary” page.</li>
+        <li>On the “Summary” page, users will be met with recommendations to read from that will assist them in improving their happiness within their own countries.</li>
+    </ol>
+    <br>
+    <h2>Technologies I Plan to Use</h2>
+    <br>
+    <h4>Softwares</h4>
+    <li>Thonny for Python when cleaning my dataset and using Flasks.</li>
+    <li>Visual Studio Code for working with HTML, JavaScript and CSS.</li>
+    <li>Microsoft Excel for accessing my datasets</li>
+    <li>Google Docs for typing up my report in advance to adding it to my HTML page.</li>
+    <li>GitHub as my chosen repository for my code and datasets, to prevent the risk of losing any changes made or its entirety.</li>
+    <li>Command Prompt for testing and running the flask application.</li>
+    <li>Google Chrome for interacting with the flask application</li>
+    <br>
+    <h4>Hardwares</h4>
+    <li>Desktop computer with Windows 11</li>
+    <br>
+    <h4>Languages and Python Dictionaries</h4>
+    <li>Python for...</li>
+    <li>HTML for creating my information system.</li>
+    <li>CSS for designing my website.</li>
+    <li>JavaScript for...</li>
+    <li>Flask for...</li>
+    <li>Pandas for...</li>
+    <li>Plotly for displaying graphs. I chose to use Plotly instead of Matplotlib as Plotly allows for the graphs to be interactive, meeting both basic requirement 2 and advanced requirement 1.</li>
+    <br>
+    <h2>Flowcharts</h2>
+    <br>
+    <h4>Sitemap Flowchart</h4>
+    <br>
+    <img src="{{ url_for('static', filename='img/Sitemap Flowchart.drawio.png') }}" alt="Flowchart">
+    <br>
+    <br>
+    <h4>Basic Requirements Flowchart</h4>
+    <br>
+    <br>
+    <img src="{{ url_for('static', filename='img/Basic Requirement.drawio.png') }}" alt="Flowchart">
+    <br>
+    <br>
+    <h4>Advanced Requirements Flowchart</h4>
+
+
+</body>
+</html>

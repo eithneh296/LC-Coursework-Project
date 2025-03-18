@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index - Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('meetingbrief') }}">Meeting the Brief</a></li>
+                <li><a href="{{ url_for('plandesign') }}">Plan and Design</a></li>
+                <li><a href="{{ url_for('create') }}">Create</a></li>
+                <li><a href="{{ url_for('evaluation') }}">Evaluation</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br> 
+        <h1>Investigation</h1>
+        <br>
+        <p>I commenced my investigation by thinking about current on-going problems that are happening in the society we live in. I was particularly interested in topics relating to the housing crisis, climate change and the happiness levels between countries. I searched for datasets on websites such as the Central Statistics Office and Kaggle. I originally downloaded the RTB “Average Monthly Rent Report” (by Quarter) dataset from the Central Statistics Office. Unfortunately, I was unable to pursue this dataset as my variables were not dependent. This was because the columns containing the variables for the yearly quarters, locations (in this case, Dublin and Meath) and the values for 1-3 bedroom apartments did not influence each other, preventing correlation. Instead, I chose the dataset titled “Happiness Index Score” (in the year 2018) from Kaggle. </p>
+        <br>
+        <p>Following my choice, I would read news articles, including RTÉ and BBC, regarding how people in many countries are limited to freedom of expression. This is due to various living conditions, such as poverty, corruption and lack of social supply. This furthered my understanding on this important topic before developing my website. The datasat displays many factors relating to my newly gained knowledge, such as freedom to make life choices and social support, proving how it affects the global happiness scores. The dataset also allowed me to view the happiness scores around the world, enabling me to consider possible recommendations for bettering these results which can be impactful for society. I commenced research on suggestions for initiatives that can be taken by governments and individuals to improve these causes. For example, the government can increase investments into health services, bettering both mental and physical health for their citizens through affordable services. In addition, individuals can volunteer for organisations and campaigns that target to improve social well being, increasing life satisfaction. This information has been found from https://worldhappiness.report/ed/2024/ and https://www.who.int/.</p>
+        <br>
+        <p>I furthered my research by looking at websites such as: https://covid19ireland-geohive.hub.arcgis.com/, https://irishcycle.com/index/, https://www2.hse.ie/services/urgent-emergency-care-report/ and https://worldhappiness.report/ed/2024/. Not only did this provide me with an insight into how statistics are displayed with graphs and charts, but it also allowed me to understand the layout and design of these informative websites. When developing my system, I wanted to pay my fullest attention to the user experience (UX), providing easy accessibility for users. I researched the 7 universal design principles in my school textbook titled: “Computer Science for Leaving Certificate” by Brett A. Becker, Keith Quille. This included design principle 6 (low physical effort) by introducing redirections and design principle 3 (simple and intuitive use) by developing a website with a standard layout, as well as including the various pages that are easy to access through the navigation bar.</p>
+</body>
+</html>

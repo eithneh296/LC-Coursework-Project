@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index - Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('meetingbrief') }}">Meeting the Brief</a></li>
+                <li><a href="{{ url_for('investigation') }}">Investigation</a></li>
+                <li><a href="{{ url_for('plandesign') }}">Plan and Design</a></li>
+                <li><a href="{{ url_for('evaluation') }}">Evaluation</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br> 
+        <h1>Create</h1>
+        <br>
+        <h2>Progress Log of Key Milestones</h2>
+        <br>
+        <h4>Week 1:</h4>
+        <li>Studied the Coursework Project Brief to understand the task assigned to us.</li>
+        <li>Researched datasets of interest to base the project off of.</li>
+        <li>Originally downloaded the “RTB Average Monthly Rent Report” (by quarter) dataset from the Central Statistics Office before “Happiness Index Score” (in the year 2018) from Kaggle. This allowed me to commence working on basic requirement 1.</li>
+        <br>
+        <h4>Week 2:</h4>
+        <li>Began investigating by reading news articles that related to this topic.</li>
+        <li>Commenced cleaning the data using pandas + numpy (???) (Python library) in Thonny.</li>
+        <br>
+        <h4>Week 3:</h4>
+        <li>Studied websites as an example for displaying data and website development.</li>
+        <li>Researched the 7 Universal Design Principles to improve user experience (UX).</li>
+        <li>Created a new program called “app.py” where I would install Flasks to create my website.</li>
+        <br>
+        <h4>Week 4:</h4>
+        <li>Created flowcharts and algorithms (/pseudocode???) for planning.</li>
+        <li>Developed HTML templates to prepare all of the pages for my website.</li>
+        <br>
+        <h4>Week 5:</h4>
+        <li>Programmed text using HTML on Visual Studio Code to develop my homepage for basic requirement 2.</li>
+        <li>Implemented Python code from Plotly to display interactive graphs, charts and tables for basic requirement 2 and advanced requirement 1.</li>
+        <br>
+        <h4>Week 6:</h4>
+        <li>Commenced creating a user poll for advanced requirement 2.</li>
+        <li>Created a new .csv file using Python.</li>
+        <li>Collected and stored string, boolean and integer data from users using JavaScript.</li>
+        <br>
+        <h4>Week 7:</h4>
+        <li>Added a redirect that redirects the user from the user poll page to the summary page.</li>
+        <li>Introduced a table that displays the summarised data from the users’ inputs in continuation for advanced requirement 2.</li>
+        <br>
+        <h4>Week 8:</h4>
+        <li>Developed a recommendations page to provide suggestions for improving individual’s happiness for advanced requirement 3</li>
+        <br>
+
+        <h2>Test Log</h2>
+        <br>
+
+        <h2>Problem I Have Encountered</h2>
+        <br>
+        <p>One problem I have encountered with my code is the attempt of getting Flask to work properly. At first, when I would run the code in Thonny there would be no output displayed in the shell. I googled and was told I should be expecting a link to be shown that would redirect me to my website. I saw on an online forum on StackOverFlow that recommended installing waitress or gevent, which allowed me to believe that would be the solution, however this did not help. I then thought it was due to Flask being version 3.1.0 and Python was version 3.13.1. Therefore, I uninstalled the 3.13.1 version for Python and I installed 3.12.9 instead, making sure it is added to the system PATH. I then upgraded Flask to make sure it's installed in Python 3.12.9. I changed the Python executable in the tools, options and interpreter tab in Thonny to the correct directory. This allowed me to fix the problem regarding Flasks. Upon running the code again in Thonny, I then received the link. However, when I opened it, the website kept loading non-stop. This was the second problem I have encountered straight after. I found another forum on StackOverFlow that suggested killing all Python processes using “taskkill /F /IM python.exe”. Finally, I opened the website link again and it displayed the output HTML code I have typed in Visual Studio Code, demonstrating that it was working!</p>
+        
+        <br>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='img/flasknotworking.png') }}" alt="Problem">
+            <img src="{{ url_for('static', filename='img/flaskworking.png') }}" alt="Solution">
+        </div>
+        
+        <br>
+        <h2>Algorithm Explained</h2>
+        <br>
+        
+</body>
+</html>

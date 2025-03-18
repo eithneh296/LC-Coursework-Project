@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index - Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('investigation') }}">Investigation</a></li>
+                <li><a href="{{ url_for('plandesign') }}">Plan and Design</a></li>
+                <li><a href="{{ url_for('create') }}">Create</a></li>
+                <li><a href="{{ url_for('evaluation') }}">Evaluation</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br> 
+        <h1>Meeting the Brief</h1>
+        <br>
+        <h2>How I met the Basic Requirements</h2>
+        <br>
+        <h4>Basic Requirement 1</h4>
+        <li>I have chosen a suitable dataset with a sufficient amount of data to analyse</li>
+        <li>I used a Python library named “pandas” to successfully extract, clean and store the data, creating a new “cleaned” .csv file.</li>
+        <br>
+        <h4>Basic Requirement 2</h4>
+        <li>I used Plotly to display all of the results using bar, line, scatter and sunburst charts with an addition of a scatter plot.</li>
+        <li>I have labelled every graph with appropriate titles and axis labels. Legends are presented on the right of the bar charts, scatter plot and the pie chart.</li>
+        <li>I have used lists to organise the countries from my dataset into the correct continents under the variable name “continent_mapping”. I have used a dictionary with the variable name “continent_stats” to store statistical data for each continent that is useful for calculating the mean, mode, median and range for every continent.</li>
+        <br>
+        <h4>Basic Requirement 3</h4>
+        <li>I have created a website based on my chosen dataset. I have also provided a navigation bar with appropriate titles that directs the user to the named pages.</li>
+        <li>The data visualisations I have created are stored under “Statistics” that can be easily accessed by the user on the navigation bar mentioned.</li>
+        <br>
+        <h2>How I met the Advanced Requirements</h2>
+        <br>
+        <h4>Advanced Requirement 1</h4>
+        <li>Plotly enables the user to hover over the graphs to view the details already. In addition, due to the continent_mapping variable I have created, it allows the user to filter the sunburst charts by clicking one or more checkbox buttons that is labelled after every continent.</li>
+        <br>
+        <h4>Advanced Requirement 2</h4>
+        <li>I have created a user poll under the “user poll” heading in the navigation bar. Here I collected string, boolean and integer values by asking the user to select their country, input whether they are happy or not and rate their happiness. After the user has submitted their results, they are then redirected to the “summary” page where they can see the results from all users displayed in a table. I have used JavaScript for the poll in the file titled “poll.js”.</li>
+        <br>
+        <h4>Advanced Requirement 3</h4>
+        <li>On the “summary” page, I have included suggestions, under the “recommendations” heading, of methods of how users can individually improve their wellbeing within their own countries.</li>
+        <br>
+
+</body>
+</html>

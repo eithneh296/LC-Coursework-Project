@@ -1,1 +1,127 @@
-<mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/></root></mxGraphModel>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram id="xMY1tKr7cbyugYwhI5QE" name="Page-1">
+    <mxGraphModel dx="882" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-1" target="aL767X_gimJ-9I1s7Hk3-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-1" value="Start AR1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-2" target="aL767X_gimJ-9I1s7Hk3-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-2" value="Import Plotly" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-3" target="aL767X_gimJ-9I1s7Hk3-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-3" value="Use Plotly to create bar, line and sunburst charts and a scatter plot" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-4" target="aL767X_gimJ-9I1s7Hk3-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-4" value="Verify that user can interact with graphs (i.e. hovering and filtering the continents)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-6" target="aL767X_gimJ-9I1s7Hk3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-6" value="End AR1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-7" target="aL767X_gimJ-9I1s7Hk3-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-7" value="Start AR2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="340" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-9" target="aL767X_gimJ-9I1s7Hk3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-9" value="Create user_poll_data.csv using Python" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-10" target="aL767X_gimJ-9I1s7Hk3-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-10" value="Create form using JavaScript, Python and HTML" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="290" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-11" target="aL767X_gimJ-9I1s7Hk3-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-11" value="Ask user to select their country using pycountry" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="285" y="390" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-12" target="aL767X_gimJ-9I1s7Hk3-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-12" value="Ask user if they are happy (Y/N)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="285" y="475" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-14" target="aL767X_gimJ-9I1s7Hk3-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-14" value="Ask user to rate their happiness&lt;div&gt;from 1-7&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="285" y="560" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-16" target="aL767X_gimJ-9I1s7Hk3-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-16" value="Process user data from form" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="285" y="650" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-17" target="aL767X_gimJ-9I1s7Hk3-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-17" value="Validate input data" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="740" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-18" target="aL767X_gimJ-9I1s7Hk3-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-18" value="Store data on user_poll_data.csv" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="830" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-19" target="aL767X_gimJ-9I1s7Hk3-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-19" value="Display results of dataset on table&lt;div&gt;and pie chart on Summary page&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#99CCFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="575" y="390" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-20" target="aL767X_gimJ-9I1s7Hk3-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-20" value="End AR2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="340" y="920" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-21" target="aL767X_gimJ-9I1s7Hk3-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-21" value="Start AR3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF66;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="630" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-22" target="aL767X_gimJ-9I1s7Hk3-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-22" value="Create table using HTML with data from dataset" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="620" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aL767X_gimJ-9I1s7Hk3-23" target="aL767X_gimJ-9I1s7Hk3-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-23" value="Create pie chart using Plotly with data from dataset" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="620" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aL767X_gimJ-9I1s7Hk3-24" value="End AR3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CC99FF;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="630" y="490" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
