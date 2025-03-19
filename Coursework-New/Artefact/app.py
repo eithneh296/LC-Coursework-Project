@@ -9,7 +9,7 @@ import pycountry
 # creating a flask web application
 app = Flask(__name__)
 
-# loading csv file with print error handling messages
+# loading csv file
 data_file = '2018-Happiness-Index-Cleaned.csv'
 if os.path.isfile(data_file):
     df = pd.read_csv(data_file)
@@ -68,7 +68,7 @@ def statistics():
 
     df['Continent'] = df['Country or region'].apply(assign_continent)
 
-    # creating checkboxes for selected continents
+    # creating checkboxes for filtering continents
     selected_continents = request.form.getlist('continents') if request.method == 'POST' else list(df['Continent'].unique())
     filtered_df = df[df['Continent'].isin(selected_continents)]
     
@@ -129,7 +129,6 @@ def summary():
     user_df = pd.read_csv(csv_file)
     user_df['Score'] = pd.to_numeric(user_df['Score'], errors='coerce')
     
-    # matching actual happiness scores
     if df is not None:
         df['Country or region'] = df['Country or region'].str.lower()
 

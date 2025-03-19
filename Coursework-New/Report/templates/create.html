@@ -64,6 +64,40 @@
         <h2>Test Log</h2>
         <br>
 
+        <table>
+            <tr>
+                <th>Test No.</th>
+                <th>Type of Test</th>
+                <th>Action</th>
+                <th>Input(s)</th>
+                <th>Expected Output(s)</th>
+                <th>Actual Output(s)</th>
+                <th>Test Result (Pass/Fail)</th>
+                <th>Comments</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Unit Testing</td>
+                <td>User Happiness Rating Validation</td>
+                <td>‘8’</td>
+                <td>Notifies the user to input a number from 1-7</td>
+                <td>‘Value must be less than or equal to 7’</td>
+                <td>Pass</td>
+                <td>The poll does not accept numbers that are larger than 7</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Unit Testing</td>
+                <td>User Happiness Rating Validation</td>
+                <td>‘1’,’2’,’3’,’4’,’5’,’6’,’7’</td>
+                <td>Accept answer and redirect to summary page</td>
+                <td>Accepts answer and redirects to summary page</td>
+                <td>Pass</td>
+                <td>The poll accepts numbers that are from 1-7</td>
+            </tr>
+        </table>
+        <br>
+
         <h2>Problem I Have Encountered</h2>
         <br>
         <p>One problem I have encountered with my code is the attempt of getting Flask to work properly. At first, when I would run the code in Thonny there would be no output displayed in the shell. I googled and was told I should be expecting a link to be shown that would redirect me to my website. I saw on an online forum on StackOverFlow that recommended installing waitress or gevent, which allowed me to believe that would be the solution, however this did not help. I then thought it was due to Flask being version 3.1.0 and Python was version 3.13.1. Therefore, I uninstalled the 3.13.1 version for Python and I installed 3.12.9 instead, making sure it is added to the system PATH. I then upgraded Flask to make sure it's installed in Python 3.12.9. I changed the Python executable in the tools, options and interpreter tab in Thonny to the correct directory. This allowed me to fix the problem regarding Flasks. Upon running the code again in Thonny, I then received the link. However, when I opened it, the website kept loading non-stop. This was the second problem I have encountered straight after. I found another forum on StackOverFlow that suggested killing all Python processes using “taskkill /F /IM python.exe”. Finally, I opened the website link again and it displayed the output HTML code I have typed in Visual Studio Code, demonstrating that it was working!</p>

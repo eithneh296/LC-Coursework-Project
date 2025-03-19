@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Index Statistics</title>
+</head>
+<body>
+    <div class="top-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
+            <h1>Happiness Index - Report</h1>
+            <ul class="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('meetingbrief') }}">Meeting the Brief</a></li>
+                <li><a href="{{ url_for('plandesign') }}">Plan and Design</a></li>
+                <li><a href="{{ url_for('create') }}">Create</a></li>
+                <li><a href="{{ url_for('evaluation') }}">Evaluation</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br> 
+        <h1>Evaluation</h1>
+        <br>
+        <p>After completing my project, I can proudly say that I am satisfied with my work. I’ve successfully met all of the Basic and Advanced requirements by:</p>
+        <br>
+        <p>(Basic Requirements)</p>
+        <ul>
+            <li>choosing an appropriate dataset and cleaning the data using Pandas.</li>
+            <li>using Plotly to create labelled graphs, using lists to organise the countries into the correct continents under the variable name “continent_mapping” and storing statistical using a dictionary, “continent_stats”, to data for each continent for calculating the mean, mode, median and range for every continent.</li>
+            <li>creating a website, providing a navigation bar with appropriate titles that directs the user to the named pages and displaying the graphs on the “Statistics” page.</li>
+        </ul>
+        <br>
+        <p>(Advanced Requirements)</p>
+        <ul>
+            <li>creating the graphs using Plotly ensuring user can hover over the graph and filtering the continents by clicking one or more checkboxes.</li>
+            <li>creating a user poll using JavaScript, Python and HTML collecting string, boolean and integer values by asking the user to select their country, input whether they are happy or not and rate their happiness.</li>
+            <li>including suggestions, under the “recommendations” heading, of methods of how users can individually improve their wellbeing within their own countries.</li>
+        </ul>
+        <br>
+        <p>An improvement I would make would be to focus on the design of the website. Unfortunately due to having no time, I was unable to design the website fully to my standard. This improvement would be beneficial as it draws the attention of the users. A second improvement would be to include my chosen dataset on the homepage of my website. I believe this would improve my project as it shows the user the original data displayed in the table.</p>
+        <br>
+        <p>Another application for my artefact would be to predict the possible future happiness scores using a regression model. This could allow for governments to view this website and consider how to implement change into society.</p>
+</body>
+</html>
