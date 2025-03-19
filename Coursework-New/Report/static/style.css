@@ -1,11 +1,9 @@
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Green top container */
 .top-container {
   background-color: #a5dc81;
   padding: 20px;
@@ -15,7 +13,6 @@
   align-items: center;
 }
 
-/* Header styles */
 .header {
   display: flex;
   align-items: center;
@@ -23,20 +20,18 @@
   width: 100%;
 }
 
-/* Logo */
 .header img {
   width: 85px;
   height: 85px;
 }
 
-/* Title */
 .header h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 32px;
   font-weight: bold;
   color: #ffffff;
   margin-left: 10px;
-  flex-grow: 1; /* Pushes the navigation to the right */
+  flex-grow: 1;
 }
 
 .nav {
@@ -48,13 +43,13 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  gap: 15px; /* Add spacing between links */
+  gap: 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav li {
-  display: inline-block; /* Ensures spacing between list items */
-  margin: 0 10px; /* Adds margin between menu items */
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .nav a {
@@ -71,31 +66,27 @@
   border-radius: 5px;
 }
 
-/* Content Container */
 .content-container {
   display: flex;
   align-items: center;
   max-width: 900px;
   margin: auto;
-  animation: fadeInUp 1s ease-out; /* Keeps animation but ensures visibility */
+  animation: fadeInUp 1s ease-out;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Paragraph text */
 .content-container p {
   flex: 1;
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* Image in content */
 .happy-img {
   width: 375px;
   height: auto;
   margin-left: 20px;
 }
 
-/* Fade-in animation */
 @keyframes fadeInUp {
   from {
     transform: translateY(50px);
@@ -108,52 +99,61 @@
 }
 
 h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change to any font you like */
-  font-size: 36px; /* Adjust size as needed */
-  font-weight: bold; /* Optional: Make it bold */
-  color: #4CAF50; /* Change color if needed */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #4CAF50;
 }
 
 h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change to any font you like */
-  font-size: 20px; /* Adjust size as needed */
-  font-weight: bold; /* Optional: Make it bold */
-  color: #060606; /* Change color if needed */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #060606;
 }
 
 h3 {
-  font-family: Arial, Helvetica, sans-serif; /* Change to any font you like */
-  font-size: 17px; /* Adjust size as needed */
-  color: #5e5e5e; /* Change color if needed */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #5e5e5e;
   text-align: center
 }
 
 h4 {
-  font-family: Arial, Helvetica, sans-serif; /* Change to any font you like */
-  font-size: 15px; /* Adjust size as needed */
-  color: #5e5e5e; /* Change color if needed */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #5e5e5e;
   text-decoration: underline;
 }
 
+li {
+  font-family: Arial, sans-serif;
+}
+
 ol {
-  list-style-type: decimal !important; /* Ensures numbers appear */
+  list-style-type: decimal !important;
   padding-left: 20px;
 }
 
 ul {
-  margin-left: 40px; /* Moves the bullet points further right */
+  font-family: Arial, sans-serif;
+  margin-left: 40px;
+}
+
+p {
+  font-family: Arial, sans-serif;
 }
 
 .image-container {
   display: flex;
-  justify-content: center; /* Centers images horizontally */
-  gap: 20px; /* Adds space between the images */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap;
 }
 
 .image-container img {
-  width: 45%; /* Ensures both images take equal width */
-  max-width: 600px; /* Limits the size */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 5px; /* Optional: Adds rounded corners */
+  width: 45%;
+  max-width: 600px; 
+  height: auto; 
+  border-radius: 5px; 
 }

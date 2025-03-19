@@ -10,17 +10,17 @@
     <div class="top-container">
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>Happiness Index Report</h1>
+            <h1>Happiness Index</h1>
             <ul class="nav">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
-                <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
                 <li><a href="{{ url_for('summary') }}">Summary</a></li>
             </ul>
         </div>
     </div>  
     <br> 
 
+    <!-- userpoll -->
     <form id="poll-form" method="POST" action="{{ url_for('userpoll') }}">
         <label for="Country">Select your country:</label>
         <select name="Country" required>

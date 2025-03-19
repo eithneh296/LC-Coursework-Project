@@ -10,22 +10,23 @@
     <div class="top-container">
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>Happiness Index Report</h1>
+            <h1>Happiness Index</h1>
             <ul class="nav">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
                 <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
-                <li><a href="{{ url_for('summary') }}">Summary</a></li>
             </ul>
         </div>
     </div>  
     <br> 
 
+    <!-- message displayed after answering form -->
     {% if message %}
     <p style="color: green; font-family: 'Arial', sans-serif; font-weight: bold;">{{ message }}</p>
     {% endif %}
 
-
+    <!-- table -->
+     <h2>User Feedback Table</h2>
     <div class="table-container">
         <table>
             <thead>
@@ -49,13 +50,46 @@
         </table>
     </div>   
 
-<!-- Pie Chart -->
+<!-- pie chart -->
 {% if pie_chart %}
     <h2>User Happiness Scores Pie Chart</h2>
     <div>{{ pie_chart|safe }}</div>
 {% else %}
     <p>No data available for the pie chart.</p>
 {% endif %}
+
+<!-- recommendations -->
+<h2>Recommendations</h2>
+<br>
+<p>From my analysis of the user input data, majority of the users feel either equally happy or happier than the original happiness score. However, there is a small percentage of users who feel less happier in their country in comparison to the actual happiness score. As a result, here are recommendations for users to individually improve their own happiness within their countries:</p>
+<br>
+<ol>
+    <li>
+        <h4>Volunteering</h4>
+        <p>Participate in voluntary organisations or campaigns with the aims of improving social well-being. These organisations can include UNICEF, The Red Cross, and Global Citizen.</p>
+        <br>
+    </li>
+    <li>
+        <h4>Social Connections</h4>
+        <p>Build and improve connections with friends/family by spending time with them.</p>
+        <br>
+    </li>
+    <li>
+        <h4>Spend Time Outdoors</h4>
+        <p>In the UK, the average person spends around 7% of their time outdoors during the working week. Similar statistics apply to countries all over the world. According to Loughborough University, increasing time outside boosts an individual's mood, improves concentration, and brings many physical health benefits.</p>
+        <br>
+    </li>
+    <li>
+        <h4>Maintain Physical Health</h4>
+        <p>Studies show that eating nutritious food, exercising regularly, and sleeping for at least 8 hours every night improves happiness immensely.</p>
+        <br>
+    </li>
+    <li>
+        <h4>Improve Mental Health</h4>
+        <p>Practice gratitude by journaling or reflecting on everything you are grateful for. In addition, regularly participate in mindfulness meditations to reduce stress.</p>
+        <br>
+    </li>
+</ol>
 
 </body>
 </html>

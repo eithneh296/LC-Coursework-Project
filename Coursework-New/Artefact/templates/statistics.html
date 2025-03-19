@@ -11,10 +11,9 @@
     <div class="top-container">
         <div class="header">
             <img src="{{ url_for('static', filename='img/sun-icon-8583.png') }}" alt="sun"/>
-            <h1>Happiness Index Report</h1>
+            <h1>Happiness Index</h1>
             <ul class="nav">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
                 <li><a href="{{ url_for('userpoll') }}">User Poll</a></li>
                 <li><a href="{{ url_for('summary') }}">Summary</a></li>
             </ul>
@@ -24,58 +23,94 @@
     
     <h1>Statistics</h1>
     <br>
- <!-- Bar Chart Section -->
+    
+    <!-- bar chart section -->
      <h2>Bar Charts</h2>
      <div>
          {{ bar_chart1|safe }}
+         <br>
+         <h4>Analysis</h4>
+         <ul>
+            <li>Majority of the top countries with the Happiest Index are Scandinavian, with the exception of Switzerland.</li>
+         </ul>
      </div>
 
     <div>
         {{ bar_chart2|safe }}
+        <br>
+        <h4>Analysis</h4>
+        <ul>
+           <li>The United Arab Emirates has the highest GDP per capita.</li>
+           <li>Somalia has no reported GDP per capita.</li>
+        </ul>
     </div>
+    <br>
 
-<!-- Line Chart Section -->
+    <!-- line chart -->
     <h2>Line Charts</h2>
     <div>
         {{ line_chart1|safe }}
+        <br>
+        <h4>Analysis</h4>
+        <ul>
+            <li>Israel has a low social support despite ranking high in the scoring for the Happiest Index.</li>
+            <li>The Central African Republic has the lowest rate of social support of 0.</li>
+         </ul>
     </div>
 
     <div>
         {{ line_chart2|safe }}
+        <br>
+        <h4>Analysis</h4>
+        <ul>
+            <li>Hong Kong has the highest rate of health life expectancy being 1.03.</li>
+            <li>Sierra Leone has the lowest rate of health life expectancy being 0. </li>
+         </ul>
+    </div>
+    <br>
+
+    <!-- scatter plot -->
+    <h2>Scatter Plot</h2>
+    <div>
+        {{ scatter_plot|safe }}
+        <br>
+        <h4>Analysis</h4>
+        <ul>
+            <li>Sierra Leone has the highest rate in freedom to make life choices being 0.724. </li>
+            <li>Angola has the lowest rate in freedom to make life choices being 0.</li>
+            <li>The scatter plot has a low negative correlation.</li>
+        </ul>
+    </div>
+    <br>
+
+    <!-- sunburst charts -->
+    <h2>Sunburst Charts</h2>
+
+    <div class="sunburst-container">
+        <div class="chart">
+            {{ sunburst_chart1|safe }}
+        </div>
+        <div class="chart">
+            {{ sunburst_chart2|safe }}
+        </div>
     </div>
 
-<!-- Scatter Plot Section -->
-<h2>Scatter Plot</h2>
-<div>
-    {{ scatter_plot|safe }}
-</div>
-
-<!-- Sunburst Chart Section -->
-<h2>Sunburst Charts</h2>
-
-<div class="sunburst-container">
-    <div class="chart">
-        {{ sunburst_chart1|safe }}
-    </div>
-    <div class="chart">
-        {{ sunburst_chart2|safe }}
-    </div>
-</div>
-
-<!-- Continent Filter Form -->
-         <h2>Select Continents to Filter Sunburst Charts</h2>
-         <form method="POST" action="{{ url_for('statistics') }}" class="continent-form">
-            <div>
-                <div><label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label></div>
-                <div><label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label></div>
-                <div><label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label></div>
-                <div><label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label></div>
-                <div><label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label></div>
-                <div><label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label></div>
-                <div><label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label></div>
-            </div>
+    <!-- continent filter form -->
+    <h2>Select Continents to Filter Sunburst Charts</h2>
+    <form method="POST" action="{{ url_for('statistics') }}" class="continent-form">
+        <div>
+            <div><label><input type="checkbox" name="continents" value="Africa" {% if 'Africa' in selected_continents %}checked{% endif %}> Africa</label></div>
+            <div><label><input type="checkbox" name="continents" value="Asia" {% if 'Asia' in selected_continents %}checked{% endif %}> Asia</label></div>
+            <div><label><input type="checkbox" name="continents" value="Europe" {% if 'Europe' in selected_continents %}checked{% endif %}> Europe</label></div>
+            <div><label><input type="checkbox" name="continents" value="North America" {% if 'North America' in selected_continents %}checked{% endif %}> North America</label></div>
+            <div><label><input type="checkbox" name="continents" value="South America" {% if 'South America' in selected_continents %}checked{% endif %}> South America</label></div>
+            <div><label><input type="checkbox" name="continents" value="Oceania" {% if 'Oceania' in selected_continents %}checked{% endif %}> Oceania</label></div>
+            <div><label><input type="checkbox" name="continents" value="Middle East" {% if 'Middle East' in selected_continents %}checked{% endif %}> Middle East</label></div>
+        </div>
             <button type="submit">Update Chart</button>
         </form>
+
+        <!-- statistics for continents (mean, median, mode, range) -->
          <div style="margin-bottom: 30px;"></div> 
          <h2>Continent-Based Statistics</h2>
          {% for continent, data in continent_stats.items() %}
